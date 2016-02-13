@@ -1,5 +1,4 @@
 /// <reference path="../../typings/react/react.d.ts" />
-/// <reference path="../../typings/react/react-dom.d.ts" />
 import React = __React;
 
 export default class MyComponent extends React.Component<any, any> {
@@ -7,8 +6,3 @@ export default class MyComponent extends React.Component<any, any> {
 		return <div>FAM</div>;
 	}
 }
-
-React.render(
-  <MyComponent />,
-  document.getElementById('container')
-);
