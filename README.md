@@ -1,5 +1,7 @@
 ## React Usage in Angular 2 Example
 
+This is using angular2-react without webpack tooling. If you are using a build tool, refer to [angular2-react repo](https://github.com/LookLikeAPro/Angular2-React) and simply use that as a npm package.
+
 ## Usage
 
 	npm install
@@ -12,9 +14,7 @@ To regenerate typescript typings:
 
 ## Adding to existing project
 
-Due to the sad state of angular 2 tooling, we are unable to create an angular2-react npm package that works.
-
-However you can still integrate angular2-react in existing angular2 projects easily using the following steps.
+You can integrate angular2-react in existing angular2 projects easily with the following steps.
 
 1. Install react
 	
@@ -40,17 +40,14 @@ However you can still integrate angular2-react in existing angular2 projects eas
 
 4. Add angular2-react
 
-	Dropping `angular2-react` folder anywhere inside app folder
+	Copy `app/angular2-react` folder to project
 
 5. Create components
 
 	Components look like this:
 
 		import React from "../angular2-react/react";
-		// Cannot do `import React, {Component, Proptype} from "..."` because the react import is hacky at the moment
 
-		// IMO interface is quite pointless. Too much work to export it and use as a data type when it is only for one component
-		// Might as well put <any, any> and use React props type checking
 		interface MyComponentProps {
 			name: string;
 		}
